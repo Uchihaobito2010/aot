@@ -1,4 +1,4 @@
-r = httpx.Client(http2=True, headers=headers, timeout=20).post(
+        r = httpx.Client(http2=True, headers=headers, timeout=20).post(
             "https://www.instagram.com/api/v1/web/accounts/account_recovery_send_ajax/", 
             data={"email_or_username": user}
         )
@@ -12,8 +12,4 @@ r = httpx.Client(http2=True, headers=headers, timeout=20).post(
 def main():
     print(f"{Aotpy}{'─' * 40}{ObitoStuffs}")
     user = input(f"{Aotpy}[?] Enter Email/Username: {ObitoStuffs}")
-    
-    if user.lower() == "owner":
-        print(f"{Aotpy}[+] Owner Telegram: t.me/Aotpy{ObitoStuffs}")
-    else:
-        print(send_reset(user))
+    print(send_reset(user))
