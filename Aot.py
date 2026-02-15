@@ -1,6 +1,13 @@
+
 import httpx
 from user_agent import generate_user_agent
- def send_reset(user):
+
+tgAotpy = 'Reset_Tool'
+Aotpy = '\033[92m'
+ObitoStuffs = '\033[0m'
+
+
+def send_reset(user):
     try:
         headers = {
             "user-agent": generate_user_agent(),
