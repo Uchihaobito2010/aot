@@ -1,3 +1,5 @@
+import httpx
+from user_agent import generate_user_agent
 def send_reset(user):
     try:
         headers = {
