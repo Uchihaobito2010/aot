@@ -7,7 +7,7 @@ Aotpy = '\033[92m'
 ObitoStuffs = '\033[0m'
 
 
- def send_reset(user):
+def send_reset(user):
     try:
         headers = {
             "user-agent": generate_user_agent(),
