@@ -1,6 +1,6 @@
 import httpx
 from user_agent import generate_user_agent
-def send_reset(user):
+ def send_reset(user):
     try:
         headers = {
             "user-agent": generate_user_agent(),
@@ -26,3 +26,6 @@ def main():
     print(f"{Aotpy}{'─' * 40}{ObitoStuffs}")
     user = input(f"{Aotpy}[?] Enter Email/Username: {ObitoStuffs}")
     print(send_reset(user))
+
+if __name__ == "__main__":
+    main()
