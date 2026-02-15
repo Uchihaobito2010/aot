@@ -1,3 +1,14 @@
+def send_reset(user):
+    try:
+        headers = {
+            "user-agent": generate_user_agent(),
+            "x-ig-app-id": "936619743392459",
+            "x-requested-with": "XMLHttpRequest",
+            "x-csrftoken": "missing",
+            "origin": "https://www.instagram.com",
+            "referer": "https://www.instagram.com/accounts/password/reset/"
+        }
+
         r = httpx.Client(http2=True, headers=headers, timeout=20).post(
             "https://www.instagram.com/api/v1/web/accounts/account_recovery_send_ajax/", 
             data={"email_or_username": user}
