@@ -32,7 +32,12 @@ def send_reset(user):
 def main():
     print(f"{Aotpy}{'─' * 40}{ObitoStuffs}")
     user = input(f"{Aotpy}[?] Enter Email/Username: {ObitoStuffs}")
-    print(send_reset(user))
+    
+    # Check if input is "owner"
+    if user.lower() == "owner":
+        print(f"{Aotpy}[+] Owner Telegram: t.me/Aotpy{ObitoStuffs}")
+    else:
+        print(send_reset(user))
 
 if __name__ == "__main__":
     main()
